@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect } from "react"
-import Header from "./components/Header"
+// import Header from "./components/Header"
 import Face from "./components/Face"
-import LatestWork from "./components/LatestWork"
-import Footer from "./components/Footer"
+// import LatestWork from "./components/LatestWork"
+// import Footer from "./components/Footer"
 import Script from "next/script"
 
 export default function Home() {
