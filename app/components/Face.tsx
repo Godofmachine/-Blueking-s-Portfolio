@@ -25,7 +25,7 @@ export default function Face() {
       const handleDesignerEnter = () => {
         designer.style.width = "100%";
         coder.style.width = "50%";
-        designer.style.zIndex = "5";
+        designer.style.zIndex = "1";
         coder.style.opacity = "2%";
         imageOne.style.opacity = "0%";
         imageTwo.style.opacity = "0%";
@@ -38,7 +38,7 @@ export default function Face() {
       const handleDesignerLeave = () => {
         designer.style.width = "50%";
         coder.style.width = "50%";
-        designer.style.zIndex = "1";
+        designer.style.zIndex = "5";
         coder.style.opacity = "100%";
         imageOne.style.opacity = "100%";
         imageTwo.style.opacity = "100%";
@@ -51,7 +51,7 @@ export default function Face() {
       const handleCoderEnter = () => {
         coder.style.width = "100%";
         designer.style.width = "50%";
-        coder.style.zIndex = "5";
+        coder.style.zIndex = "1";
         designer.style.opacity = "2%";
         imageOne.style.opacity = "0%"; // Fix here
         imageThree.style.opacity = "0%"; // Fix here
@@ -64,7 +64,7 @@ export default function Face() {
       const handleCoderLeave = () => {
         coder.style.width = "50%";
         designer.style.width = "50%";
-        coder.style.zIndex = "1";
+        coder.style.zIndex = "5";
         designer.style.opacity = "100%";
         imageOne.style.opacity = "100%";
         imageThree.style.opacity = "100%";
@@ -90,7 +90,7 @@ export default function Face() {
   
 
   return (
-    <div ref={faceRef} className="relative flex justify-center w-[100vw] h-[35vh] min-[450px]:h-[40vh] min-[500px]:h-[50vh] sm:h-[55vh] md:h-[70vh] lg:h-[99vh] overflow-y-clip">
+    <div ref={faceRef} className="relative flex justify-center w-[100vw] min-h-[30vh] sm:h-[55vh] md:h-[70vh] lg:h-[99vh] overflow-y-clip">
       <Link href="/#">
         <div
           ref={designerRef}
@@ -107,27 +107,27 @@ export default function Face() {
       <Link href="/#">
         <div
           ref={coderRef}
-          className="absolute right-0 w-[50vw] h-full overflow-hidden bg-opacity-5 bg-transparent flex items-center justify-center"
+          className="absolute right-0 w-[50vw] h-full overflow-hidden bg-opacity-5 bg-transparent pb-10 flex flex-col items-center justify-center"
         >
-          <div className="min-[560px]:p-4 md:p-2 lg:p-8 right-6 sm:right-8 md:right-10 absolute pb-10 flex z-5">
+          <div className="min-[560px]:p-4 md:p-2 lg:p-8 right-6 sm:right-8 md:right-10 absolute  flex z-5">
             <div className="text-right">
               <h1 className="text-xl min-[340px]:text-2xl min-[450px]:text-3xl sm:text-4xl lg:text-4xl xl:text-7xl font-bold mb-2 sm:mb-4">
-                <span className="">&lt;</span>coder/<span className="">&gt;</span>
+                <span className="">&lt;</span>dev/<span className="">&gt;</span>
               </h1>
               <p className="font-medium text-xs md:text-xs lg:text-sm xl:text-md max-md:hidden sm:w-36 lg:w-72">Front end developer who writes clean, elegant and efficient code.</p>
             </div>
           </div>
         </div>
       </Link>
-      <div className=" max-[360px]:mr-18 max-[560px]:mr-10 max-[600px]:pl-6 w-1/2 sm:pl-12 md:pl-5 lg:pl-0 lg:pr-10 ">
+      <div className=" max-[360px]:mr-18 max-[560px]:mr-10 max-[600px]:pl-6 w-1/2 sm:pl-12 md:pl-5 lg:pl-0 lg:pr-10 z-20">
         <div ref={imageRef3} className="w-1/2 overflow-hidden">
-          <img  src="/images/designer.png" alt="Designer Portrait" className="absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
+          <img  src="/images/designer.png" alt="Blueking Designer Portrait" className="absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
         </div>
         <div ref={imageRef2} className="w-1/2 overflow-hidden">
-          <img src="/images/coder.png" alt="Coder Portrait" className=" absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
+          <img src="/images/coder.png" alt="Blueking Coder Portrait" className=" absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
         </div>
         <div ref={imageRef1} className="w-1/2 overflow-hidden">
-          <img src="/images/designer-coder.png" alt="Designer-Coder Portrait" className="absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
+          <img src="/images/designer-coder.png" alt="Blueking Designer-Coder Portrait" className="absolute bottom-0 w-[180px] min-[450px]:w-[230px] min-[500px]:w-[250px] md:w-[380px] lg:w-[500px] xl:w-[700px]"  />
         </div>
       </div>
     </div>
